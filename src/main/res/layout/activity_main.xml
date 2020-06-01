@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/c"
+    tools:context=".MainActivity">
+
+
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="233dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="115dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bluetooth"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/bluetooth"
+        app:layout_constraintBottom_toTopOf="@+id/map_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/forward"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/f"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_fragment" />
+
+    <Button
+        android:id="@+id/backward"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bw"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forward"
+        app:layout_constraintVertical_bias="0.827" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/r"
+        app:layout_constraintBottom_toTopOf="@+id/backward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/left"
+        app:layout_constraintTop_toTopOf="@+id/forward" />
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/l"
+        app:layout_constraintBottom_toTopOf="@+id/backward"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/forward"
+        app:layout_constraintVertical_bias="0.545" />
+</androidx.constraintlayout.widget.ConstraintLayout>
